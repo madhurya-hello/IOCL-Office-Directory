@@ -1,4 +1,4 @@
-| Best Employee Management System on Internet |
+| Best Employee Management System on the Internet |
 |---------------------------------------------|
 | ![Employee Management System](screenshots/11.png) |
 
