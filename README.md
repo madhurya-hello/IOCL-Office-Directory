@@ -84,11 +84,13 @@ Built with React + Redux (Frontend) and Spring Boot + MySQL (Backend), it ensure
 <summary><b>🔽 View All Screenshots (23 images)</b></summary>
 
 ### 🔐 Login
+
 | Login Page | OTP Verification |
 |------------|------------------|
 | ![Login Page](screenshots/02-a.png) | ![OTP Verification](screenshots/02-b.png) |
 
 ### 🏠 Home Page
+
 | Welcome Screen | Birthday List |
 |----------------|---------------|
 | ![Welcome](screenshots/03.png) | ![Birthday List](screenshots/04.png) |
@@ -102,6 +104,7 @@ Built with React + Redux (Frontend) and Spring Boot + MySQL (Backend), it ensure
 | ![Wish Inbox](screenshots/07.png) | ![Password Change](screenshots/08.png) |
 
 ### 🎂 Birthday Page
+
 | Overall Look |
 |------------|
 | ![Birthday Calendar](screenshots/09.png) |
@@ -129,10 +132,26 @@ Built with React + Redux (Frontend) and Spring Boot + MySQL (Backend), it ensure
 | ![Expanded View](screenshots/17.png) | ![QR Code](screenshots/18.png) |
 
 ### 📞 Intercom Page
+
 | Overall Look |
 |--------------|
 | ![Intercom Overview](screenshots/19.png) |
 
+### 📋 Request Page
+
+| Overall Look |
+|--------------|
+| ![Requests](screenshots/20.png) |
+
+| Comparison Card | Accept / Reject |
+|-----------------|-----------------|
+| ![Comparison](screenshots/21.png) | ![Reject Request](screenshots/22.png) |
+
+### ♻️ Recycle Page
+
+| Overall Look |
+|--------------|
+| ![Recycle](screenshots/23.png) |
 
 </details>
 
