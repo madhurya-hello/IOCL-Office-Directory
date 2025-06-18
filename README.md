@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="screenshots/11.png" alt="Employee Management System"/>
-</p>
+| Best Employee Management System on Internet |
+|---------------------------------------------|
+| ![Employee Management System](screenshots/11.png) |
 
 ## 📑 Table of Contents
 - [🌟 Introduction](#-introduction)
