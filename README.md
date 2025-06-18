@@ -98,23 +98,36 @@ Built with React + Redux (Frontend) and Spring Boot + MySQL (Backend), it ensure
 | ![Wish Card](screenshots/06.png) | ![Wish Inbox](screenshots/07.png) | ![Password Change](screenshots/08.png) |
 
 ### 🎂 Birthday Page
-![Birthday Calendar](screenshots/09.png)
+| Overall Look |
+|------------|
+| ![Birthday Calendar](screenshots/09.png) |
 
 ### 🔍 Search Page
-| Overall Look | Cards View | List View |
-|--------------|------------|-----------|
-| ![Search Overview](screenshots/10.png) | ![Cards View](screenshots/11.png) | ![List View](screenshots/12.png) |
 
-| Download Option | Add Employee Form | Bulk Upload |
-|-----------------|-------------------|-------------|
-| ![Download](screenshots/13.png) | ![Add Form](screenshots/14.png) | ![Bulk Upload](screenshots/15.png) |
+| Overall Look |
+|--------------|
+| ![Search Overview](screenshots/10.png) |
 
-| User Details Cards | Expanded Cards | QR Code Mobile View |
-|--------------------|----------------|---------------------|
-| ![Details Cards](screenshots/16.png) | ![Expanded View](screenshots/17.png) | ![QR Code](screenshots/18.png) |
+| Cards View | List View |
+|------------|-----------|
+| ![Cards View](screenshots/11.png) | ![List View](screenshots/12.png) |
+
+| Download Option | Add Employee Form |
+|-----------------|-------------------|
+| ![Download](screenshots/13.png) | ![Add Form](screenshots/14.png) |
+
+| Bulk Upload | User Details Cards |
+|-------------|--------------------|
+| ![Bulk Upload](screenshots/15.png) | ![Details Cards](screenshots/16.png) |
+
+| Expanded Cards | QR Code Mobile View |
+|----------------|---------------------|
+| ![Expanded View](screenshots/17.png) | ![QR Code](screenshots/18.png) |
 
 ### 📞 Intercom Page
-![Intercom Overview](screenshots/19.png)
+| Overall Look |
+|--------------|
+| ![Intercom Overview](screenshots/19.png) |
 
 
 </details>
