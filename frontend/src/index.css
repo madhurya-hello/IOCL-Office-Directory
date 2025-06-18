@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* Global Styles */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* App Container */
+.filter-scrollable-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.filter-scrollable-container::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.filter-scrollable-container::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+.filter-scrollable-container::-webkit-scrollbar-thumb:hover {
+  background: #2561e7;
+}
+
+/* For Firefox */
+.filter-scrollable-container {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #f3f4f6;
+}
+
