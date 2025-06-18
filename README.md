@@ -89,13 +89,17 @@ Built with React + Redux (Frontend) and Spring Boot + MySQL (Backend), it ensure
 | ![Login Page](screenshots/02-a.png) | ![OTP Verification](screenshots/02-b.png) |
 
 ### 🏠 Home Page
-| Welcome Screen | Birthday List | Birthday Send Wish Portal |
-|----------------|---------------|---------------------------|
-| ![Welcome](screenshots/03.png) | ![Birthday List](screenshots/04.png) | ![Wish Portal](screenshots/05.png) |
+| Welcome Screen | Birthday List |
+|----------------|---------------|
+| ![Welcome](screenshots/03.png) | ![Birthday List](screenshots/04.png) |
 
-| Birthday Wish Card | Birthday Wish Inbox | Change Password |
-|--------------------|---------------------|-----------------|
-| ![Wish Card](screenshots/06.png) | ![Wish Inbox](screenshots/07.png) | ![Password Change](screenshots/08.png) |
+| Birthday Send Wish Portal | Birthday Wish Card |
+|---------------------------|--------------------|
+| ![Wish Portal](screenshots/05.png) | ![Wish Card](screenshots/06.png) |
+
+| Birthday Wish Inbox | Change Password |
+|---------------------|-----------------|
+| ![Wish Inbox](screenshots/07.png) | ![Password Change](screenshots/08.png) |
 
 ### 🎂 Birthday Page
 | Overall Look |
