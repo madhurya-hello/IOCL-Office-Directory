@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"; // Redux hooks
 import { Box, Card, CardContent } from "@mui/material"; // Material-UI components
-import TopCard from "../components/Intercom/TopCard"; // Top filter/search bar
-import IntercomCard from "../components/Intercom/IntercomCard"; // Employee card list
-import LeftCard from "../components/Intercom/LeftCard"; // Employee details panel
+import TopCard from "../components/intercom/TopCard"; // Top filter/search bar
+import IntercomCard from "../components/intercom/IntercomCard"; // Employee card list
+import LeftCard from "../components/intercom/LeftCard"; // Employee details panel
 import { motion, AnimatePresence } from "framer-motion"; // Animation library
 import IntercomUpload from "../components/intercom/IntercomUpload"; // File upload component
 import { toast, ToastContainer } from "react-toastify"; // Notification library
