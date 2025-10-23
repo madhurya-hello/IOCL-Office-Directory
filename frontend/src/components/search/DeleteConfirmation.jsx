@@ -28,7 +28,7 @@ const DeleteConfirmation = ({ employee, onClose, onConfirm }) => {
     try {
       // Send PUT request to move employee to recycle bin
       const response = await fetch(
-        `http://localhost:8080/api/employees/moveToRecycleBin?id=${employee.id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/moveToRecycleBin?id=${employee.id}`,
         {
           method: "PUT", // Use PUT method for updating employee status
           headers: {

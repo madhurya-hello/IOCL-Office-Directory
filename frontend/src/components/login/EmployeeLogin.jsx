@@ -43,7 +43,7 @@ function EmployeeLogin({
     // Similar validation as AdminLogin
     try {
       const response = await fetch(
-        "http://localhost:8080/api/employees/loginEmployee",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/loginEmployee`,
         {
           method: "POST",
           headers: {

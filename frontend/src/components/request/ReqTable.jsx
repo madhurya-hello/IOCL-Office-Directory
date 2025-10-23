@@ -352,12 +352,12 @@ const ReqTable = ({
       setCompLoaded(false);
 
       const currentDataResponse = await axios.get(
-        `http://localhost:8080/api/employees/getSpecificData?id=${req.empId}`
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/getSpecificData?id=${req.empId}`
       );
       setOldData(currentDataResponse.data);
 
       const requestedChangesResponse = await axios.get(
-        `http://localhost:8080/api/employees/requestsDataSpecific?requestId=${req.requestId}`
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/requestsDataSpecific?requestId=${req.requestId}`
       );
       setNewData(requestedChangesResponse.data);
 

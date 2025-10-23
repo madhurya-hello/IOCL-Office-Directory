@@ -6,7 +6,7 @@ export const fetchAllEmployees = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/employees/getAllEmployees"
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/getAllEmployees`
       );
       return response.data;
     } catch (error) {
@@ -20,7 +20,7 @@ export const fetchLineChartData = createAsyncThunk(
   async (_, { rejectWithValue, getState }) => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/employees/getLineChartData"
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/getLineChartData`
       );
       return response.data;
     } catch (error) {
@@ -34,7 +34,7 @@ export const fetchPieChartData = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/employees/getPieChartData"
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/getPieChartData`
       );
       return response.data;
     } catch (error) {
@@ -48,7 +48,7 @@ export const addEmployee = createAsyncThunk(
   async (employeeData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/employees",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees`,
         employeeData
       );
       return response.data;
@@ -63,7 +63,7 @@ export const moveMultipleToRecycleBin = createAsyncThunk(
   async (employeeIds, { rejectWithValue }) => {
     try {
       const response = await axios.put(
-        "http://localhost:8080/api/employees/moveMultipleToRecycleBin",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/moveMultipleToRecycleBin`,
         { ids: employeeIds },
         {
           headers: {
@@ -83,7 +83,7 @@ export const restoreEmployees = createAsyncThunk(
   async (employeeIds, { rejectWithValue }) => {
     try {
       const response = await axios.put(
-        "http://localhost:8080/api/employees/restoreFromRecycleBin",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/restoreFromRecycleBin`,
         { ids: employeeIds }
       );
       return response.data.restoredEmployees;
@@ -98,7 +98,7 @@ export const fetchIntercomData = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/employees/intercomData"
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/intercomData`
       );
       return response.data;
     } catch (error) {
@@ -112,7 +112,7 @@ export const addNewIntercomData = createAsyncThunk(
   async (employeeData, { rejectWithValue, getState }) => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/employees/addNewIntercomData",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/addNewIntercomData`,
         employeeData
       );
 
@@ -146,7 +146,7 @@ export const updateIntercomData = createAsyncThunk(
   async ({ id, employeeData }, { rejectWithValue, getState }) => {
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/employees/updateIntercomData?id=${id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/updateIntercomData?id=${id}`,
         employeeData
       );
 
@@ -179,7 +179,7 @@ export const deleteIntercomBulk = createAsyncThunk(
   async (employeeIds, { rejectWithValue }) => {
     try {
       const response = await axios.delete(
-        "http://localhost:8080/api/employees/deleteIntercomBulk",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/deleteIntercomBulk`,
         {
           data: { ids: employeeIds },
           headers: {
@@ -199,7 +199,7 @@ export const fetchRecycleCount = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/employees/recycleCount"
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/recycleCount`
       );
       return response.data;
     } catch (error) {
@@ -213,7 +213,7 @@ export const fetchRequestCount = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/employees/requestCount"
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/requestCount`
       );
       return response.data;
     } catch (error) {

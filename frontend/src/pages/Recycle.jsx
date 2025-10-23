@@ -52,7 +52,7 @@ const Recycle = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://localhost:8080/api/employees/getRecycledData"
+          `${import.meta.env.VITE_API_BASE_URL}/api/employees/getRecycledData`
         );
         setRecycledItems(response.data);
         setError(null);
@@ -176,7 +176,7 @@ const Recycle = () => {
 
     try {
       setDeleting(true);
-      await axios.delete("http://localhost:8080/api/employees/deleteForever", {
+      await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/employees/deleteForever`, {
         data: { ids: selectedIds },
       });
 

@@ -57,7 +57,7 @@ const ImportCard = ({ onClose }) => {
 
       // Send POST request to server
       const response = await axios.post(
-        "http://localhost:8080/api/employees/import",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/import`,
         formData,
         {
           headers: {

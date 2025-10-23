@@ -64,8 +64,8 @@ function LoginCard({
 
     try {
       const endpoint = isHeAdmin
-        ? "http://localhost:8080/api/employees/sendAdminOTP"
-        : "http://localhost:8080/api/employees/sendEmployeeOTP";
+        ? `${import.meta.env.VITE_API_BASE_URL}/api/employees/sendAdminOTP`
+        : `${import.meta.env.VITE_API_BASE_URL}/api/employees/sendEmployeeOTP`;
 
       const response = await fetch(endpoint, {
         method: "POST",
@@ -104,8 +104,8 @@ function LoginCard({
 
     try {
       const endpoint = isHeAdmin
-        ? "http://localhost:8080/api/employees/sendAdminOTP"
-        : "http://localhost:8080/api/employees/sendEmployeeOTP";
+        ? `${import.meta.env.VITE_API_BASE_URL}/api/employees/sendAdminOTP`
+        : `${import.meta.env.VITE_API_BASE_URL}/api/employees/sendEmployeeOTP`;
 
       const response = await fetch(endpoint, {
         method: "POST",

@@ -169,7 +169,7 @@ const ExpandedCardView = ({ card, employee, onClose, index, setEmployee }) => {
       };
       // Update employee data via API
       const response = await axios.put(
-        `http://localhost:8080/api/employees/updateEmployee?id=${index}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/updateEmployee?id=${index}`,
         updatedData
       );
 

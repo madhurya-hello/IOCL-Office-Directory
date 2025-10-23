@@ -6,7 +6,7 @@ export const fetchRecycledData = createAsyncThunk(
   'recycleBin/fetchRecycledData',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://localhost:8080/api/employees/getRecycledData');
+      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/employees/getRecycledData`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -18,7 +18,7 @@ export const deleteEmployeesForever = createAsyncThunk(
   'recycleBin/deleteForever',
   async (ids, { rejectWithValue }) => {
     try {
-      await axios.delete('http://localhost:8080/api/employees/deleteForever', {
+      await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/employees/deleteForever`, {
         data: { ids }
       });
       return ids;
@@ -32,7 +32,7 @@ export const restoreEmployees = createAsyncThunk(
   'recycleBin/restore',
   async (ids, { rejectWithValue }) => {
     try {
-      await axios.put('http://localhost:8080/api/employees/restoreFromRecycleBin', {
+      await axios.put(`${import.meta.env.VITE_API_BASE_URL}/api/employees/restoreFromRecycleBin`, {
         ids
       });
       return ids;

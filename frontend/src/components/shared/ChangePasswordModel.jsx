@@ -57,7 +57,7 @@ const ChangePasswordModal = ({ onClose, email }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/api/employees/changePassword?id=${currentUser.id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/changePassword?id=${currentUser.id}`,
         {
           method: "PUT",
           headers: {

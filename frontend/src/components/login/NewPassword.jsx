@@ -90,7 +90,7 @@ function NewPassword({ empId, onPasswordReset, actionType }) {
     try {
       // API call to reset password
       const response = await fetch(
-        "http://localhost:8080/api/employees/forgotPassword",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/forgotPassword`,
         {
           method: "POST",
           headers: {

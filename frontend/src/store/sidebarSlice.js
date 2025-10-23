@@ -5,7 +5,7 @@ import axios from 'axios';
 export const fetchRecycleCount = createAsyncThunk(
   'sidebar/fetchRecycleCount',
   async () => {
-    const response = await axios.get('http://localhost:8080/api/employees/recycleCount');
+    const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/employees/recycleCount`);
     return response.data;
   }
 );
@@ -13,7 +13,7 @@ export const fetchRecycleCount = createAsyncThunk(
 export const fetchRequestCount = createAsyncThunk(
   'sidebar/fetchRequestCount',
   async () => {
-    const response = await axios.get('http://localhost:8080/api/employees/requestCount');
+    const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/employees/requestCount`);
     return response.data;
   }
 );

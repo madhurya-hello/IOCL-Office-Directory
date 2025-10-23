@@ -102,7 +102,7 @@ const Calendar = ({ onEmployeeClick }) => {
       setLoading(true);
       setError(null);
       const response = await axios.get(
-        `http://localhost:8080/api/employees/getEmpByMonth`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/getEmpByMonth`,
         {
           params: { month },
         }

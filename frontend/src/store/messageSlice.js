@@ -6,7 +6,7 @@ export const fetchBirthdayData = createAsyncThunk(
   'message/fetchBirthdayData',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://localhost:8080/api/birthday/getTodayData');
+      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/birthday/getTodayData`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -33,7 +33,7 @@ export const sendBirthdayMessage = createAsyncThunk(
       };
 
       const response = await axios.post(
-        'http://localhost:8080/api/birthday/sendMessage',
+        `${import.meta.env.VITE_API_BASE_URL}/api/birthday/sendMessage`,
         requestBody,
         {
           headers: {
@@ -61,7 +61,7 @@ export const fetchInboxData = createAsyncThunk(
       }
 
       const response = await axios.get(
-        `http://localhost:8080/api/birthday/inboxData?receiverId=${currentUser.id}`
+        `${import.meta.env.VITE_API_BASE_URL}/api/birthday/inboxData?receiverId=${currentUser.id}`
       );
       
       return response.data;
@@ -83,7 +83,7 @@ export const fetchSenderMessages = createAsyncThunk(
       }
 
       const response = await axios.post(
-        'http://localhost:8080/api/birthday/viewSenderMessages',
+        `${import.meta.env.VITE_API_BASE_URL}/api/birthday/viewSenderMessages`,
         {
           receiverId: currentUser.id,
           senderId: senderId

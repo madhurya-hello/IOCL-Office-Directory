@@ -167,7 +167,7 @@ const RequestPage = () => {
     const fetchRequests = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/employees/requestsData"
+          `${import.meta.env.VITE_API_BASE_URL}/api/employees/requestsData`
         );
         setRequests(response.data);
         setIsLoading(false);
@@ -190,7 +190,7 @@ const RequestPage = () => {
       if (!dataToUpdate) {
         try {
           const response = await axios.get(
-            `http://localhost:8080/api/employees/requestsDataSpecific?requestId=${requestId}`
+            `${import.meta.env.VITE_API_BASE_URL}/api/employees/requestsDataSpecific?requestId=${requestId}`
           );
           dataToUpdate = response.data;
           setNewData(dataToUpdate);
@@ -201,7 +201,7 @@ const RequestPage = () => {
       }
 
       const updateResponse = await axios.put(
-        `http://localhost:8080/api/employees/updateEmployee?id=${empId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/updateEmployee?id=${empId}`,
         dataToUpdate,
         {
           headers: {
@@ -212,7 +212,7 @@ const RequestPage = () => {
 
       if (updateResponse.status === 200) {
         const statusResponse = await axios.post(
-          "http://localhost:8080/api/employees/setRequestStatus",
+          `${import.meta.env.VITE_API_BASE_URL}/api/employees/setRequestStatus`,
           {
             emp_id: empId,
             r_status: "accepted",
@@ -227,7 +227,7 @@ const RequestPage = () => {
 
         if (statusResponse.status === 200) {
           const deleteResponse = await axios.delete(
-            `http://localhost:8080/api/employees/deleteRequest?requestId=${requestId}`
+            `${import.meta.env.VITE_API_BASE_URL}/api/employees/deleteRequest?requestId=${requestId}`
           );
 
           if (deleteResponse.status === 200) {
@@ -255,7 +255,7 @@ const RequestPage = () => {
     setIsLoading(true);
     try {
       const statusResponse = await axios.post(
-        "http://localhost:8080/api/employees/setRequestStatus",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/setRequestStatus`,
         {
           emp_id: empId,
           r_status: "rejected",
@@ -270,7 +270,7 @@ const RequestPage = () => {
 
       if (statusResponse.status === 200) {
         const response = await axios.delete(
-          `http://localhost:8080/api/employees/deleteRequest?requestId=${requestId}`
+          `${import.meta.env.VITE_API_BASE_URL}/api/employees/deleteRequest?requestId=${requestId}`
         );
 
         if (response.status === 200) {

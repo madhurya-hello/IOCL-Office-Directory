@@ -26,7 +26,7 @@ const Home = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://localhost:8080/api/birthday/isBirthday?emp_id=${currentUser.id}`
+          `${import.meta.env.VITE_API_BASE_URL}/api/birthday/isBirthday?emp_id=${currentUser.id}`
         );
         setBirthday(response.data.birthday);
       } catch (error) {

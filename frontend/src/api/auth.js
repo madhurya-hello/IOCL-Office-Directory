@@ -1,6 +1,6 @@
 // Handles user login by sending credentials to the auth API
 export const loginUser = async (credentials) => {
-  const API_ENDPOINT = "http://localhost:8080/api/auth/login";
+  const API_ENDPOINT = `${import.meta.env.VITE_API_BASE_URL}/api/auth/login`;
   try {
     const response = await fetch(API_ENDPOINT, {
       method: "POST",

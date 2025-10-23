@@ -67,7 +67,7 @@ function OTP({
     try {
       // API call to verify OTP
       const response = await fetch(
-        "http://localhost:8080/api/employees/verifyOTP",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/verifyOTP`,
         {
           method: "POST",
           headers: {

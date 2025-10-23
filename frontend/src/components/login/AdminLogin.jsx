@@ -43,7 +43,7 @@ function AdminLogin({
     try {
       // API call to authenticate admin
       const response = await fetch(
-        "http://localhost:8080/api/employees/loginAdmin",
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/loginAdmin`,
         {
           method: "POST",
           headers: {

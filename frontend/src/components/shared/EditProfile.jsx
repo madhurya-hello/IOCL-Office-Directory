@@ -362,7 +362,7 @@ const EditProfile = ({ onClose, onSubmit }) => {
     const fetchRequestStatus = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/employees/myRequestStatus?emp_id=${currentUser.id}`
+          `${import.meta.env.VITE_API_BASE_URL}/api/employees/myRequestStatus?emp_id=${currentUser.id}`
         );
         setRequestStatus(response.data.r_status);
         setRejectionMessage(response.data.r_message);
@@ -373,7 +373,7 @@ const EditProfile = ({ onClose, onSubmit }) => {
         ) {
           try {
             await axios.delete(
-              `http://localhost:8080/api/employees/deleteMyRequestStatus?empId=${currentUser.id}`
+              `${import.meta.env.VITE_API_BASE_URL}/api/employees/deleteMyRequestStatus?empId=${currentUser.id}`
             );
           } catch (deleteError) {
             console.error("Error clearing request status:", deleteError);
@@ -382,7 +382,7 @@ const EditProfile = ({ onClose, onSubmit }) => {
 
         try {
           const response = await axios.get(
-            `http://localhost:8080/api/employees/getSpecificData?id=${currentUser.id}`
+            `${import.meta.env.VITE_API_BASE_URL}/api/employees/getSpecificData?id=${currentUser.id}`
           );
           const transformedData = {
             empNo: response.data.empNo.toString(),
@@ -519,7 +519,7 @@ const EditProfile = ({ onClose, onSubmit }) => {
       const id = currentUser.id;
       // Make the API call to update the employee
       const response = await axios.put(
-        `http://localhost:8080/api/employees/updateEmployee?id=${id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/updateEmployee?id=${id}`,
         employeeData,
         {
           headers: {
@@ -596,7 +596,7 @@ const EditProfile = ({ onClose, onSubmit }) => {
       };
 
       await axios.post(
-        `http://localhost:8080/api/employees/requestUpdate?id=${currentUser.id}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/requestUpdate?id=${currentUser.id}`,
         employeeData,
         {
           headers: {
@@ -606,7 +606,7 @@ const EditProfile = ({ onClose, onSubmit }) => {
       );
 
       await axios.post(
-        `http://localhost:8080/api/employees/setRequestStatus`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/employees/setRequestStatus`,
         {
           emp_id: currentUser.id,
           r_status: "pending",
