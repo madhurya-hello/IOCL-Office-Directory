@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import bgVideo from "../assets/indian-oil-video.mp4"; // Background video
 import { useNavigate } from "react-router-dom"; // Hook for navigation
 import LogoHeader from "../components/shared/LogoHeader"; // Logo component
-import LoginCard from "../components/Login/LoginCard"; // Login form component
+import LoginCard from "../components/login/LoginCard"; // Login form component
 
 // Login component for user authentication
 function Login() {
