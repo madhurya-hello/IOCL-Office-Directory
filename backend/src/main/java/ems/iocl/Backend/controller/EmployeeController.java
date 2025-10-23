@@ -1,5 +1,8 @@
 package ems.iocl.Backend.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin; 
+import org.springframework.web.bind.annotation.RestController;
+
 import ems.iocl.Backend.dto.*;
 import ems.iocl.Backend.entity.*;
 import ems.iocl.Backend.repository.EmployeeRepository;
